@@ -1,0 +1,21 @@
+EventCode,Count,Meaning
+4907,17008,Audit policy change
+4624,1640,Successful logon
+4672,1487,Special privileges assigned to new logon
+5379,1150,Credential Manager credentials read
+4634,633,Logoff event
+4799,582,Security group membership enumeration
+4688,309,Process creation
+4798,244,User's local group membership enumeration
+4735,150,Security group modified
+4648,140,Logon attempted using explicit credentials
+5061,73,Cryptographic operation
+5058,58,Key file operation
+4769,52,Kerberos service ticket requested
+5059,48,Key migration
+4781,45,Name of an account changed
+4731,43,Security-enabled local group created
+4738,36,User account changed
+4608,34,System startup
+4902,34,Per-user audit policy table created
+5024,33,Windows Firewall service started
