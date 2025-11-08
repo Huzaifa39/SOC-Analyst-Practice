@@ -10,7 +10,7 @@
 1. **00_Baseline_Visibility**
    - Panel 1: Top Event Codes
    - Panel 2: Events Per Hour by Host
-   - ![00_Baseline_Visibility](dashboards/00_Baseline_Visibility.png)
+     ![00_Baseline_Visibility](dashboards/00_Baseline_Visibility.png)
 
 
 2. **SOC_Daily_View**
