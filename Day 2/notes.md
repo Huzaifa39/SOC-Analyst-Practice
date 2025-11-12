@@ -1,14 +1,17 @@
 # SOC Lab – Splunk & Sysmon Hands-on
 
-## Lab Setup
+## Work Summary
 
-- Installed **Sysmon** on at least one host (`win10_host`) using the [SwiftOnSecurity Sysmon config](https://github.com/SwiftOnSecurity/sysmon-config).
+- Installed **Sysmon** on one host (`win10_host`) using the [SwiftOnSecurity Sysmon config](https://github.com/SwiftOnSecurity/sysmon-config).
 - Installed Splunk Add-ons:
   - [Splunk Add-on for Microsoft Windows](https://splunkbase.splunk.com/app/742)
   - [Splunk Add-on for Sysmon](https://splunkbase.splunk.com/app/3001)
   - [Splunk Security Essentials](https://splunkbase.splunk.com/app/3435)
 
 ### Baseline Running Processes (Sysmon)
+
+This query lists the currently running processes on Windows hosts using Sysmon, showing process names, command lines, and parent processes for monitoring and investigation.
+
 ```
 index=win10_host sourcetype=XmlWinEventLog:Microsoft-Windows-Sysmon/Operational
 | stats count by Image, CommandLine, ParentImage
