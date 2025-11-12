@@ -87,8 +87,14 @@ index=win10_host EventCode=1102 OR EventCode=4719
 
 ## Alerts Generated
 
+### Triggered Alerts
+
 ![Triggered-Alerts.png](Images/TriggeredAlerts.png)
 
+### Successful Login After Multiple Failures
+
 ![Login=After-Failure.png](Images/LoginAfterFailure.png)
+
+### Log Clear / Audit Policy Changes
 
 ![Log-Clear.png](Images/LogClear.png)
