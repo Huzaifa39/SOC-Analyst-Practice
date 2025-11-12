@@ -3,7 +3,7 @@
 ## Work Summary
 
 - Installed **Sysmon** on one host (`win10_host`) using the [SwiftOnSecurity Sysmon config](https://github.com/SwiftOnSecurity/sysmon-config).
-  ![Sysmon-Installation](Images/SysmonAddon.png)
+  ![Sysmon-Installation](Images/SysmonInstallation.png)
   
 - Installed Splunk Add-ons:
   - [Splunk Add-on for Microsoft Windows](https://splunkbase.splunk.com/app/742)
