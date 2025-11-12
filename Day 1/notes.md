@@ -10,6 +10,7 @@
 1. **00_Baseline_Visibility**
    - Panel 1: Top Event Codes
    - Panel 2: Events Per Hour by Host
+     
      ![00_Baseline_Visibility](dashboards/00_Baseline_Visibility.png)
 
 
@@ -18,6 +19,7 @@
    - Panel 2: Top Failed Accounts
    - Panel 3: Top Source IPs
    - Panel 4: Total Events per Host
+     
      ![SOC_Daily_View](dashboards/SOC_Daily_View.png)
 
 
