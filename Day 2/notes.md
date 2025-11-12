@@ -84,3 +84,11 @@ index=win10_host EventCode=1102 OR EventCode=4719
 | stats count by _time, ComputerName, Account_Name, EventCode
 | where count >= 1
 ```
+
+## Alerts Generated
+
+![Triggered-Alerts.png](Images/TriggeredAlerts.png)
+
+![Login=After-Failure.png](Images/LoginAfterFailure.png)
+
+![Log-Clear.png](Images/LogClear.png)
