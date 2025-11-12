@@ -24,7 +24,7 @@
 ### Queries Used
 - List all indexes:
   ```spl
-  index=* eventcount summarize=false | sort - count
+  | eventcount summarize=false index=* | sort - count
   ```
 - List All Event Codes:
   ```spl
