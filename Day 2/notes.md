@@ -1,4 +1,4 @@
-# SOC Analyst Practice – Splunk & Sysmon Hands-on
+# SOC Analyst Practice - Splunk & Sysmon Hands-on
 
 ## Work Summary
 
