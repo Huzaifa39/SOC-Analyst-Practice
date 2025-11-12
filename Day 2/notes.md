@@ -8,16 +8,18 @@
   - [Splunk Add-on for Sysmon](https://splunkbase.splunk.com/app/3001)
   - [Splunk Security Essentials](https://splunkbase.splunk.com/app/3435)
 
-## Queries and Detections
-
-### 1. Running Processes (Sysmon)
-```spl
+### Baseline Running Processes (Sysmon)
+```
 index=win10_host sourcetype=XmlWinEventLog:Microsoft-Windows-Sysmon/Operational
 | stats count by Image, CommandLine, ParentImage
 | sort - count
 ```
 
-### 2. Brute-force / Credential Stuffing
+## Queries and Detections
+
+The following queries and detections were created to monitor and analyze critical security events on Windows hosts.
+
+### 1. Brute-force / Credential Stuffing
 ```
 index=win10_host EventCode=4625
 | bin _time span=5m
@@ -25,7 +27,7 @@ index=win10_host EventCode=4625
 | where fails >= 5
 ```
 
-### 3. Successful Login After Multiple Failures
+### 2. Successful Login After Multiple Failures
 ```
 index=win10_host (EventCode=4625 OR EventCode=4624)
 | sort 0 _time
@@ -33,7 +35,7 @@ index=win10_host (EventCode=4625 OR EventCode=4624)
 | where EventCode==4624 AND recent_failures>=3
 ```
 
-### 4. New Local User Creation
+### 3. New Local User Creation
 ```
 index=win10_host (EventCode=4625 OR EventCode=4624)
 | sort 0 _time
@@ -41,17 +43,15 @@ index=win10_host (EventCode=4625 OR EventCode=4624)
 | where EventCode==4624 AND recent_failures>=3
 ```
 
-### 5. Sensitive Command Execution (PowerShell, Certutil)
+### 4. Sensitive Command Execution (PowerShell, Certutil)
 ```
 index=win10_host (CommandLine="*powershell*" OR CommandLine="*certutil*")
 | stats count by Computer, User, CommandLine
 ```
 
-### 6. Log Clear / Audit Policy Changes
+### 5. Log Clear / Audit Policy Changes
 ```
 index=win10_host EventCode=1102 OR EventCode=4719
 | stats count by _time, ComputerName, Account_Name, EventCode
 | where count >= 1
 ```
-
-
