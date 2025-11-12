@@ -8,8 +8,16 @@
   
 - Installed Splunk Add-ons:
   - [Splunk Add-on for Microsoft Windows](https://splunkbase.splunk.com/app/742)
+
+    ![Windows-Addon.png](Images/WindowsAddon.png)
+    
   - [Splunk Add-on for Sysmon](https://splunkbase.splunk.com/app/3001)
+
+    ![Sysmon-Addon](Images/SysmonAddon.png)
+    
   - [Splunk Security Essentials](https://splunkbase.splunk.com/app/3435)
+
+    ![Security-Essentials-Addon](Images/SecEssentialsAddon.png)
 
 ### Baseline Running Processes (Sysmon)
 
